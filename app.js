@@ -9,11 +9,6 @@ const apps = require('./playStoreApps.js')
 
 console.log( ['Bananas', 'Apples'].sort((a, b) => a.localeCompare(b, 'en', {sensitivity: 'base'})) )
 
-// ['Apple', 'Orange', 'Banana'].sort()
-
-// function sortData(sort, a, b) {
-
-// }
 
 app.get('/apps', (req, res) => {
     const { sort, genre } = req.query; 
@@ -43,14 +38,6 @@ app.get('/apps', (req, res) => {
                 ); 
             return res.json(appsSorted); 
         }
-        // else {
-        //     appsSorted = apps
-        //         .sort((a, b) => (
-        //             if (['rating'].includes(sort)) {
-                        
-        //             }
-        //         )
-        // }
     
     }
 
